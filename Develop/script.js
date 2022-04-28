@@ -47,8 +47,26 @@ $("#btn-9").on("click", function () {
     localStorage.setItem("task-input-9", input9.value);
 });
 
-function() {
-
+var getLocalStorage = function() {
+    const d = new Date()
+    const hour = d.toLocaleTimeString('en-US', {
+        // en-US can be set to 'default' to use user's browser settings
+        hour: '2-digit',
+        
+      });
+    console.log(hour);
+    const timeArr = [9, 10, 11, 12, 1, 2, 3, 4, 5,]
+    for (let i = 1; i < 10; i++) { 
+        var task = localStorage.getItem(`task-input-${i}`)
+        if (task) {
+            console.log(task);
+            var input = $(`#input-${i}`)
+            input.val(task);
+            console.log(input)
+        };
+      };
 };
+
+getLocalStorage();
 
 
