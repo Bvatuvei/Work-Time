@@ -6,5 +6,5 @@
 
 ## [link] [code-link]https://github.com/Bvatuvei/Work-Time, [website-link]https://bvatuvei.github.io/Work-Time/
 
-
-! [Screenshot] (./Develop/images/Work-day.png?raw=true)
+## Screenshot
+![Screenshot](./Develop/images/Work-day.png)
