@@ -60,14 +60,16 @@ var getLocalStorage = function() {
       });
     console.log(hour);
     //gets the local storage from array and appends it to page
-    const timeArr = [9, 10, 11, 12, 13, 14, 15, 16, 17,]
-    for (let i = 1; i < 10; i++) { 
-        var task = localStorage.getItem(`task-${i}`)
+    const timeArr = [9, 10, 11, 12, 13, 14, 15, 16, 17]
+    for (let i = 0; i < timeArr.length; i++) { 
+        var task = localStorage.getItem(`task-${timeArr[i]}`)
+        console.log(task);
         if (task) {
-            var input = $(`#${i}`)
+            var input = $(`#${timeArr[i]}`)
             input.val(task);
         };
       };
+      
 
       $("input").each(function () {
         var time = $(this).attr("id");
